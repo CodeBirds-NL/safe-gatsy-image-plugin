@@ -1,0 +1,16 @@
+{
+  "name": "safe-gatsby-image-plugin",
+  "version": "1.0.0",
+  "description": "Safe React Image component that doesn't break when some inputs are undefined but renders a placeholder image",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "PieterT2000",
+  "license": "ISC",
+  "peerDependencies": {
+    "react": "16.x",
+    "react-dom": "16.x",
+    "gatsby-image": "2.x"
+  }
+}
