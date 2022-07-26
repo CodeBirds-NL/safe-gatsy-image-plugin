@@ -1,12 +1,32 @@
 import React from "react";
-import Img from "gatsby-image";
+import Img, { FluidObject } from "gatsby-image";
 
-let defaultBgColor = "f2f2f2";
-let defaultSize = "960x540";
+/** Constants applying only to Placeholder component */
+const defaultBgColor = "f2f2f2";
+const defaultSize = "960x540";
 
-const Image = ({ data, style, className }) => {
-  if (!data) {
-    return <PlaceHolder style={style} className={className} />;
+type ImageData = {
+  alt_text: string;
+  localFile: {
+    childImageSharp: {
+      fluid: FluidObject;
+    };
+  };
+  source_url: string;
+};
+interface ImageProps {
+  data: ImageData;
+  className?: string;
+  style?: Object;
+  /** Only applies if gatsby-image component is used */
+  imgStyle?: Object;
+  [key: string]: any; // any other props
+}
+
+const Image = (props: ImageProps) => {
+  const { data, ...imageProperties } = props;
+  if (!props.data) {
+    return <PlaceHolder {...imageProperties} />;
   }
 
   const { alt_text, localFile, source_url } = data;
@@ -15,11 +35,10 @@ const Image = ({ data, style, className }) => {
     <Img
       alt={alt_text}
       fluid={localFile.childImageSharp.fluid}
-      style={style}
-      className={className}
+      {...imageProperties}
     />
   ) : (
-    <img alt={alt_text} style={style} className={className} src={source_url} />
+    <img alt={alt_text} src={source_url} {...imageProperties} />
   );
 };
 

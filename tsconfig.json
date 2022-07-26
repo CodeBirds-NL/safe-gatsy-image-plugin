@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    // "noImplicitAny": true,
+    "noImplicitAny": true,
     "allowSyntheticDefaultImports": true,
     "removeComments": true,
     "allowJs": true,
