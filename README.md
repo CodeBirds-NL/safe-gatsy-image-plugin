@@ -7,10 +7,18 @@
 - If the transformed localFile cannot be found, the original image is used.
 - If the passed image is `null|undefined`, a placeholder image will be used.
 
-### Usage example
+### Setup
+
+#### 1. Install
+
+```bash
+npm i safe-gatsby-image-plugin
+```
+
+#### 2. Usage example
 
 ```jsx
- import { Image } from 'gatsby-image';
+ import { Image } from 'safe-gatsby-image-plugin';
 
  // Example of of what a typical image object returned by Gatsby looks like
  const imageDataObj = {
