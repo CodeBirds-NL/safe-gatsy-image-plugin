@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    // "noImplicitAny": true,
+    "allowSyntheticDefaultImports": true,
+    "removeComments": true,
+    "allowJs": true,
+    "moduleResolution": "node",
+    "declaration": true,
+    "jsx": "react",
+    "target": "es6",
+    "lib": [
+      "ES2015",
+      "dom",
+      "dom.iterable"
+    ]
+  },
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

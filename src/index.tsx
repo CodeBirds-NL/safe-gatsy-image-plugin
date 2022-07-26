@@ -1,6 +1,9 @@
 import React from "react";
 import Img from "gatsby-image";
 
+let defaultBgColor = "f2f2f2";
+let defaultSize = "960x540";
+
 const Image = ({ data, style, className }) => {
   if (!data) {
     return <PlaceHolder style={style} className={className} />;
@@ -20,8 +23,6 @@ const Image = ({ data, style, className }) => {
   );
 };
 
-const defaultBgColor = "f2f2f2";
-const defaultSize = "960x540";
 export const PlaceHolder = ({
   bg_color = defaultBgColor,
   size = defaultSize,
